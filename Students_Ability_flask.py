@@ -10,8 +10,8 @@ def welcome():
 def calc():
     import pandas as pd
     import pickle
-    kmeans_new=pickle.load(open("D:\\All in one\\New folder (2)\\model.pkl","rb"))
-    clusters_new=pd.read_excel("D:\\All in one\\New folder (2)\\clusters_new.xlsx")
+    kmeans_new=pickle.load(open("model.pkl","rb"))
+    clusters_new=pd.read_excel("clusters_new.xlsx")
     input_para=[float(request.form['Graduation Marks']),float(request.form['Entrance Marks'])]
     input_para[0]=(input_para[0]-77.3172)/9.2327
     input_para[1]=(input_para[1]-127.9162)/27.4483
